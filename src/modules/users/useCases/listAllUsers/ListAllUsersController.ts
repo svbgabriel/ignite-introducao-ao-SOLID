@@ -15,7 +15,7 @@ class ListAllUsersController {
         user_id: user_id.toString(),
       });
     } catch (e) {
-      return response.status(400).json({ error: e });
+      return response.status(400).json({ error: e.toString() });
     }
 
     return response.status(201).json(users);

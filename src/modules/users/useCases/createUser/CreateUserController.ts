@@ -13,7 +13,7 @@ class CreateUserController {
     try {
       user = this.createUserUseCase.execute({ email, name });
     } catch (e) {
-      return response.status(400).json({ error: e });
+      return response.status(400).json({ error: e.toString() });
     }
 
     return response.status(201).json(user);
